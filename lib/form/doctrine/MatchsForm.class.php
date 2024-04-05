@@ -18,7 +18,7 @@ class MatchsForm extends BaseMatchsForm {
               'nager', 'hase', 'feld', 'gras', 'kraut', 'gurke', 'apfel', 'salat', 'tomate', 'dressing', 'essig', 'zwiebel', 'kuchen', 'zucker', 'salz', 'kaffee', 'tee',
               'monday', 'tuesday', 'wednesday', 'friday', 'weekend', 'holiday', 'doctor', 'game', 'cup', 'death', 'player', 'monitor', 'hand', 'food', 'paper', 'windows', 'together');
         $password = $password[rand(0, count($password)-1)];
-        $supportedRoundFormats = array("15" => "MR15", "12" => "MR12", "9" => "MR9", "5" => "MR5", "3" => "MR3");
+        $supportedRoundFormats = array("15" => "MR15", "12" => "MR12", "8" => "MR8", "5" => "MR5", "3" => "MR3");
         $defaultRoundFormat = sfConfig::get('app_default_max_round');
         if (!array_key_exists($defaultRoundFormat, $supportedRoundFormats)) $defaultRoundFormat = 12;
         $this->widgetSchema["max_round"] = new sfWidgetFormSelect(array("choices" => $supportedRoundFormats, "default" => $defaultRoundFormat));
